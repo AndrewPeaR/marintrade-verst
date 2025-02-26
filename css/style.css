@@ -1,0 +1,313 @@
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: "TildaSans";
+  src: url("fonts/TildaSans-Light.eot");
+  src: url("fonts/TildaSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/TildaSans-Light.woff2") format("woff2"), url("fonts/TildaSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSans";
+  src: url("fonts/TildaSans-Regular.eot");
+  src: url("fonts/TildaSans-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/TildaSans-Regular.woff2") format("woff2"), url("fonts/TildaSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSans";
+  src: url("fonts/TildaSans-Medium.eot");
+  src: url("fonts/TildaSans-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/TildaSans-Medium.woff2") format("woff2"), url("fonts/TildaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSans";
+  src: url("fonts/TildaSans-Semibold.eot");
+  src: url("fonts/TildaSans-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/TildaSans-Semibold.woff2") format("woff2"), url("fonts/TildaSans-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TildaSans";
+  src: url("fonts/TildaSans-Bold.eot");
+  src: url("fonts/TildaSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/TildaSans-Bold.woff2") format("woff2"), url("fonts/TildaSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Condensed";
+  src: url("fonts/3270semicondensed.eot");
+  src: url("fonts/3270semicondensed.eot?#iefix") format("embedded-opentype"), url("fonts/3270semicondensed.woff2") format("woff2"), url("fonts/3270semicondensed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Condensed";
+  src: url("fonts/3270condensed.eot");
+  src: url("fonts/3270condensed.eot?#iefix") format("embedded-opentype"), url("fonts/3270condensed.woff2") format("woff2"), url("fonts/3270condensed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapper {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1150px) {
+  .wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+* {
+  font-family: "TildaSans", sans-serif;
+}
+
+body {
+  padding: 0 20px;
+}
+
+.burger {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  height: 53px;
+  transition: all 0.2s ease-in;
+}
+@media screen and (max-width: 480px) {
+  .burger {
+    width: 40.8px;
+    height: 40.8px;
+  }
+}
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 45%;
+  transition: all 0.3s ease 0s;
+}
+.burger::before {
+  top: 19px;
+}
+@media screen and (max-width: 480px) {
+  .burger::before {
+    top: 23px;
+  }
+}
+.burger::after {
+  bottom: 21px;
+}
+@media screen and (max-width: 480px) {
+  .burger::after {
+    bottom: 23px;
+  }
+}
+.burger:hover {
+  border-color: none;
+}
+.burger.active span {
+  transform: scale(0);
+}
+.burger.active {
+  border: none;
+}
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+@media screen and (max-width: 480px) {
+  .burger.active::before {
+    top: 48%;
+  }
+}
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.block-scroll {
+  overflow: hidden;
+}
+
+.main-banner {
+  padding-top: 50px;
+  background-image: url("../img/main-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  mask-image: url("../img/clip-banner.svg");
+  height: 1004px;
+}
+.main-banner__description {
+  margin-top: 66px;
+  padding-top: 66px;
+  padding-left: 66px;
+}
+.main-banner__title {
+  font-size: 64px;
+  font-weight: 600;
+  color: white;
+  max-width: 570px;
+  text-transform: uppercase;
+}
+.main-banner__description {
+  display: flex;
+  justify-content: space-between;
+}
+.main-banner__text {
+  font-size: 26px;
+}
+
+.header {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 478px;
+  border-radius: 22px;
+  background-color: rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(10.6999998093px);
+  padding: 8px 10px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.header a {
+  color: inherit;
+}
+.header__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 9px;
+}
+.header__item {
+  padding: 21px 24px;
+}
+.header__item:first-child {
+  background-color: white;
+  border-radius: 16px;
+  transition: all 0.2s ease-in;
+}
+.header__item:first-child:hover {
+  color: white;
+  background-color: black;
+}
+.header__item:last-child {
+  background-color: #1E1E1E;
+  border-radius: 22px;
+  color: white;
+  transition: all 0.2s ease-in;
+}
+.header__item:last-child:hover {
+  background-color: #137ED8;
+}
+
+.nav {
+  flex: 1;
+  padding-left: 28px;
+  padding-right: 28px;
+  background-color: white;
+  border-radius: 16px;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 84px;
+}
+.nav__item {
+  transition: all 0.2s ease-in;
+  height: 100%;
+}
+.nav__item:hover {
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */

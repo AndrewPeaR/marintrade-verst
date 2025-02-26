@@ -1,0 +1,75 @@
+.wrapper
+    max-width: 1540px
+    margin: 0 auto
+    @include mediaSmallDesktop
+        padding-left: 20px
+        padding-right: 20px
+
+*
+    font-family: $font-main
+
+body
+    padding: 0 20px
+// ADAPTIVE MOBILE
+// .open
+//     display: flex !important
+.burger
+    cursor: pointer
+    display: flex
+    position: relative
+    z-index: 50
+    align-items: center
+    justify-content: center
+    width: 53px
+    height: 53px
+    // border: 1px solid $dark
+    @include transition
+    @include mediaMobile
+        width: 40.8px
+        height: 40.8px
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        height: 2px
+        width: 45%
+        // background-color: $dark
+        transition: all 0.3s ease 0s
+
+    &::before
+        top: 19px
+        @include mediaMobile
+            top: 23px
+
+    &::after
+        bottom: 21px
+        @include mediaMobile
+            bottom: 23px
+
+    &:hover
+        border-color: none
+        // background-color: $dark
+        &::before,
+        &::after
+            // background-color: $white
+
+    &.active span
+        transform: scale(0)
+
+    &.active
+        border: none
+        // background-color: $dark
+        &::before
+            // background-color: $white
+            top: 50%
+            transform: rotate(-45deg) translate(0, -50%)
+            @include mediaMobile
+                top: 48%
+
+        &::after
+            // background-color: $white
+            bottom: 50%
+            transform: rotate(45deg) translate(0, 50%)
+
+.block-scroll
+    overflow: hidden

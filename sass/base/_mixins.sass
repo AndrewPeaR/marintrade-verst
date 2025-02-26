@@ -1,0 +1,27 @@
+@mixin font-styles($font-size, $font-weight, $line-height, $letter-spacing, $color)
+    font-size: $font-size
+    font-weight: $font-weight
+    line-height: $line-height
+    letter-spacing: $letter-spacing
+    color: $color
+
+@mixin mediaSmallDesktop
+    @media screen and (max-width: 1150px)
+        @content
+@mixin mediaTablet
+    @media screen and (max-width: 768px)
+        @content
+@mixin mediaSmallTablet
+    @media screen and (max-width: 640px)
+        @content
+@mixin mediaMobile
+    @media screen and (max-width: 480px)
+        @content
+
+@mixin transition
+    transition: all 0.20s ease-in
+
+@mixin animation($name)
+    animation-name: $name
+    animation-duration: 3s
+    animation-timing-function: ease
