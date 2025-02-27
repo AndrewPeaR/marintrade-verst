@@ -1,24 +1,28 @@
-.main-banner
-    padding-top: 50px
-    background-image: url('../img/main-banner.jpg')
-    background-size: cover
-    background-position: center 
-    mask-image: url('../img/clip-banner.svg')
-    height: 1004px
+.main
+    margin-bottom: 180px
+    &__banner
+        padding-top: 50px
+        background-image: url('../img/main-banner.jpg')
+        background-size: cover
+        background-position: center 
+        mask-image: url('../img/clip-banner.svg')
+        height: 1004px
 
     &__description
-        margin-top: 66px
-        padding-top: 66px
+        position: relative
+        z-index: 2
+        margin-top: -330px
         padding-left: 66px
+        padding-right: 40px
+        display: flex
+        justify-content: space-between
     &__title
         font-size: 64px
         font-weight: 600
         color: white
         max-width: 570px
         text-transform: uppercase
-
-    &__description
-        display: flex
-        justify-content: space-between
     &__text
         font-size: 26px
+        max-width: 450px
+        margin-bottom: 70px

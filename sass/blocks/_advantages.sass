@@ -1,0 +1,48 @@
+.advantages
+    margin-bottom: 160px
+    &__title
+        text-align: center
+        font-size: 64px
+        text-transform: uppercase
+        font-family: 'Condensed', sans-serif
+        font-weight: 600
+        margin-bottom: 110px        
+    &__item
+        position: relative
+        max-width: 602px
+        height: 717px
+        width: 100%
+        img
+            object-fit: cover
+            height: 100%
+            border-radius: 40px
+
+.card
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 60px 74px 0 74px
+    &__pagination
+        position: unset !important
+        text-align: unset !important
+    &__title
+        font-size: 26px
+        font-weight: 500
+        color: $dark
+        margin-bottom: 22px
+    &__text
+        font-size: 18px
+        margin-bottom: 50px
+    .swiper-pagination
+        .swiper-pagination-bullet
+            height: 23px
+            width: 23px
+            background-color: $dark
+            opacity: 0.3
+            &-active
+                opacity: 1

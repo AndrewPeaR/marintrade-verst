@@ -1,39 +1,237 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marin-trade</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body>
-    <div class="wrapper main-banner">
-        <header class="header">
-            <ul class="header__items">
-                <a href="#" class="header__item">название</a>
-                <nav class="header__item nav">
-                    <ul class="nav__list">
-                        <!-- TODO: Нормально прописать ховеры на шапке -->
-                        <li class="nav__item"><a href="#">главная</a></li>
-                        <li class="nav__item"><a href="#">о компании</a></li>
-                        <li class="nav__item"><a href="#">наши вендоры</a></li>
-                        <li class="nav__item"><a href="#">контакты</a></li>
-                    </ul>
-                </nav>
-                <a href="#" class="header__item">перейти в каталог</a>
-            </ul>
-        </header>
-        <div class="main-banner__description">
-            <h1 class="main-banner__title">Дистрибуция серверного оборудования</h1>
-            <div class="main-banner__subtitle">
-                <p class="main-banner__text">
-                    Мы подбираем лучшие технологии для вашего бизнеса и любимого дела уже более 5 лет. Сопровождаем сделки от запроса клиента до готовых сборок.
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header body-padding">
+      <ul class="header__items">
+        <a href="#" class="header__item">Марин трейд</a>
+        <nav class="header__item nav">
+          <ul class="nav__list">
+            <!-- TODO: Нормально прописать ховеры на шапке -->
+            <li class="nav__item"><a href="#">главная</a></li>
+            <li class="nav__item"><a href="#">о компании</a></li>
+            <li class="nav__item"><a href="#">наши вендоры</a></li>
+            <li class="nav__item"><a href="#">контакты</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="header__item">перейти в каталог</a>
+      </ul>
+    </header>
+    <main class="main body-padding wrapper">
+      <div class="main__banner"></div>
+      <div class="main__description">
+        <h1 class="main__title">Дистрибуция серверного оборудования</h1>
+        <div class="main__subtitle">
+          <p class="main__text">
+            Мы подбираем лучшие технологии для вашего бизнеса и любимого дела
+            уже более 5 лет. Сопровождаем сделки от запроса клиента до готовых
+            сборок.
+          </p>
+          <a href="#" class="btn"
+            ><span class="btn__arrow"
+              ><img src="/img/btn-arrow.svg" alt="btn-arrow" /></span
+            ><span class="btn__text">перейти в каталог</span></a
+          >
+        </div>
+      </div>
+    </main>
+
+    <section class="advantages">
+      <h2 class="advantages__title">Преимущества работы с нами</h2>
+      <div class="advantages__items">
+        <!-- <div class="advantages__item card">
+            <div class="card__pagination swiper-pagination"></div>
+            <div class="card__description">
+                <h3 class="card__title">Профессиональная команда</h3>
+                <p class="card__text">
+                    Не следует, однако, забывать, что начало повседневной работы по формированию позиции напрямую зависит от поэтапного и последовательного развития общества.
                 </p>
-                <div>
-                    кнопка
+            </div>
+        </div> -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="advantages__item">
+                  <img src="/img/advantages/advantages1.png" alt="advantages1">
+                  <div class="card">
+                    <div class="swiper-pagination card__pagination"></div>
+                    <div class="card__description">
+                      <h3 class="card__title">Профессиональная команда</h3>
+                      <p class="card__text">
+                        Не следует, однако, забывать, что начало повседневной работы по формированию позиции напрямую зависит от поэтапного и последовательного развития общества.
+                      </p>
+                    </div>
+                  </div>
                 </div>
             </div>
+            <div class="swiper-slide">
+                <div class="advantages__item">
+                  <img src="/img/advantages/advantages2.png" alt="advantages1">
+                  <div class="card">
+                    <div class="swiper-pagination card__pagination"></div>
+                    <div class="card__description">
+                      <h3 class="card__title">Профессиональная команда</h3>
+                      <p class="card__text">
+                        Не следует, однако, забывать, что начало повседневной работы по формированию позиции напрямую зависит от поэтапного и последовательного развития общества.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="advantages__item">
+                  <img src="/img/advantages/advantages3.png" alt="advantages1">
+                  <div class="card">
+                    <div class="swiper-pagination card__pagination"></div>
+                    <div class="card__description">
+                      <h3 class="card__title">Профессиональная команда</h3>
+                      <p class="card__text">
+                        Не следует, однако, забывать, что начало повседневной работы по формированию позиции напрямую зависит от поэтапного и последовательного развития общества.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="advantages__item">
+                  <img src="/img/advantages/advantages4.png" alt="advantages1">
+                  <div class="card">
+                    <div class="swiper-pagination card__pagination"></div>
+                    <div class="card__description">
+                      <h3 class="card__title">Профессиональная команда</h3>
+                      <p class="card__text">
+                        Не следует, однако, забывать, что начало повседневной работы по формированию позиции напрямую зависит от поэтапного и последовательного развития общества.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
-    </div>
-</body>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
+    </section>
+
+    <section class="vendors">
+      <div class="wrapper">
+        <div class="vendors__wrapper">
+          <h2 class="vendors__title">Наши вендоры</h2>
+          <div class="vendors__items">
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+            <a href="#" class="vendors__item">
+              <img src="/img/vendors/huawei.png" alt="huawei">
+              <div class="vendors__hover-arrow"><img src="/img/vendors-arrow.svg" alt="vendors-arrow"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__undertitle"><span>Наша задача</span>— позаботиться о вашем времени и подобрать лучшую технику для вас и вашего бизнеса</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">    
+      <div class="wrapper footer__wrapper">
+        <ul class="footer__header">
+          <li>
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">Главная</a></li>
+              <li class="footer__nav-item"><a href="#">Описание</a></li>
+              <li class="footer__nav-item"><a href="#">Фото офиса</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">О компании</a></li>
+              <li class="footer__nav-item"><a href="#">Описание</a></li>
+              <li class="footer__nav-item"><a href="#">Фото офиса</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">Наши вендоры</a></li>
+              <li class="footer__nav-item"><a href="#">Вендоры</a></li>
+              <li class="footer__nav-item"><a href="#">Авторизованный партнер</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="footer__nav">
+              <li class="footer__nav-item"><a href="#">Контакты</a></li>
+              <li class="footer__nav-item"><a href="#">Карта</a></li>
+              <li class="footer__nav-item"><a href="#">Адрес</a></li>
+              <li class="footer__nav-item"><a href="#">График работы</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="footer__footer">
+          <div class="footer__contacts">
+            <p class="footer__address">Адрес: <a href="#">Москва, Киевское шоссе 3, стр.1, 117133 Бизнес-парк G10</a></p>
+            <p class="footer__phone">Телефон: <a href="#">8 (495) 222-50-03</a></p>
+            <p class="footer__email">Email: <a href="#">test@test.ru</a></p>
+            <p class="footer__copyright">© Все права защищены ООО "Marine Trade"</p>
+          </div>
+          <div class="footer__logo">
+            <img src="/img/main-banner.jpg" alt="main-banner">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+  </body>
 </html>

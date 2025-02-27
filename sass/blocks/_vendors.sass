@@ -1,0 +1,38 @@
+.vendors
+    background-color: $dark
+    padding-top: 90px
+    padding-bottom: 140px
+    &__title
+        font-size: 64px
+        font-family: "Condensed", sans-serif
+        color: white
+        text-align: center
+        margin-bottom: 100px
+        text-transform: uppercase
+    &__items
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        column-gap: 72px
+        row-gap: 64px
+    &__hover-arrow
+        background-color: $dark
+        border-radius: 16px
+        width: 60px
+        height: 60px
+        padding-top: 11px
+        position: absolute
+        right: 25px
+        bottom: -70px
+        @include transition
+    &__item
+        position: relative
+        overflow: hidden
+        background-color: white
+        border-radius: 42px
+        height: 290px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 22px 0
+        &:hover .vendors__hover-arrow
+            bottom: 25px
