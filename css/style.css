@@ -508,28 +508,98 @@ legend {
   height: 100%;
   width: 100%;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   background-color: rgba(0, 0, 0, 0.3);
+  animation: closeModal 0.6s ease forwards;
 }
-
-.modal-form__wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-form__body {
-  background-color: red;
-  height: 200px;
-  width: 500px;
+  background-image: url("../img/form-background.png");
+  background-size: cover;
+  background-position: center center;
+  margin: 5% auto;
+  border-radius: 25px;
+  width: 75%;
+  padding: 73px 64px;
+  display: flex;
+  gap: 180px;
+  position: relative;
 }
-
 .modal-form_open {
   display: block !important;
+  animation: openModal 0.6s ease forwards;
+}
+.modal-form__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.modal-form__close img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+.modal-form__right {
+  flex: 1 1 100%;
+}
+.modal-form__title {
+  font-size: 80px;
+  font-weight: 600;
+  max-width: 45%;
+  color: white;
+  text-transform: uppercase;
+}
+.modal-form__form {
+  border-radius: 25px;
+  background: rgba(217, 217, 217, 0.12);
+  backdrop-filter: blur(8.8500003815px);
+  padding: 20px;
+}
+.modal-form__textarea {
+  resize: vertical;
+}
+.modal-form__input {
+  width: 100%;
+  border-radius: 17px;
+  background-color: white;
+  padding: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.modal-form__input::placeholder {
+  color: black;
+  opacity: 0.5;
+}
+.modal-form__checkbox {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.modal-form__checkbox a {
+  color: #137ED8;
+}
+.modal-form__checkbox input {
+  position: absolute;
+  z-index: -9999;
+  opacity: 0;
+}
+.modal-form__checkbox-input {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 8px;
+}
+.modal-form__checkbox input:checked + .modal-form__checkbox-input {
+  background-color: #137ED8;
+}
+.modal-form__submit {
+  margin-top: 25px;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 24px;
 }
 
 @keyframes openModal {
@@ -539,6 +609,16 @@ legend {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes closeModal {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
   }
 }
 .footer {

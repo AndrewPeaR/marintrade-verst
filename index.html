@@ -187,7 +187,7 @@
             <p class="contacts__text"><a href="tel:88009991122">8 (495) 222-50-03</a><br /><span>Время работы:</span> 9:00 - 19:00</p>
             <p class="contacts__text"><span>Email:</span> <a href="mailto:test@email.ru">test@email.ru</a></p>
             <div class="btn-wrapper">
-              <button class="btn" onclick="toggleForm()">оставить заявку</button>
+              <button class="btn" id="openModalForm">оставить заявку</button>
             </div>
           </div>
           <div class="contacts__helpcenter">
@@ -246,10 +246,25 @@
       </div>
     </footer>
 
-    <div class="modal-form">
-      <div class="modal-form__wrapper">
-        <div class="modal-form__body">
-          hello
+    <div id="modalForm" class="modal-form">
+      <div class="modal-form__body">
+        <div class="modal-form__left">
+          <h3 class="modal-form__title">Обратная связь</h3>
+        </div>
+        <div class="modal-form__right">
+          <form action="#" class="modal-form__form">
+            <input type="text" class="modal-form__input" placeholder="Ваше имя" name="name">
+            <input type="text" class="modal-form__input" placeholder="Телефон" name="phone">
+            <input type="text" class="modal-form__input" placeholder="Почта" name="email">
+            <textarea class="modal-form__input modal-form__textarea" rows="3" name="message" placeholder="Ваше сообщение"></textarea>
+            <label class="modal-form__checkbox">
+              <input type="checkbox">
+              <div class="modal-form__checkbox-input"></div>
+              <span>Я солгласен с условиями <a href="#">политики конфедициальности</a></span>
+            </label>
+            <button type="submit" class="modal-form__submit">Отправить</button>
+          </form>
+          <button class="modal-form__close" id="closeModalForm"><img src="./img/close.svg" alt="close"></button>
         </div>
       </div>
     </div>
