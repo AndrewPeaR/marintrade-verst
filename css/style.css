@@ -262,6 +262,7 @@ legend {
   background-position: center;
   mask-image: url("../img/clip-banner.svg");
   height: 1004px;
+  border: 5px solid black;
 }
 .main__description {
   position: relative;
@@ -283,6 +284,30 @@ legend {
   font-size: 26px;
   max-width: 450px;
   margin-bottom: 70px;
+}
+
+.actions {
+  margin-bottom: 85px;
+}
+.actions .section-title {
+  font-family: "Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 600;
+  color: #1E1E1E;
+  text-align: center;
+  margin-bottom: 85px;
+}
+.actions__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.actions__item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 26px;
+  color: #1E1E1E;
 }
 
 .header {
@@ -320,7 +345,7 @@ legend {
 }
 .header__item:first-child:hover {
   color: white;
-  background-color: black;
+  background-color: #137ED8;
 }
 .header__item:last-child {
   background-color: #1E1E1E;
@@ -343,14 +368,16 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 84px;
 }
 .nav__item {
+  padding: 0 15px;
   transition: all 0.2s ease-out;
   height: 100%;
+  border-radius: 8px;
 }
 .nav__item:hover {
-  background-color: black;
+  color: white;
+  background-color: #137ED8;
 }
 
 .advantages {
@@ -458,6 +485,8 @@ legend {
 
 .contacts {
   margin-top: 135px;
+  margin-bottom: 200px;
+  position: relative;
 }
 .contacts__title {
   font-size: 64px;
@@ -498,6 +527,69 @@ legend {
 }
 .contacts__helpcenter {
   margin-bottom: 200px;
+}
+.contacts__photo {
+  position: absolute;
+}
+.contacts .photo1 {
+  top: 250px;
+  right: 100px;
+}
+.contacts .photo2 {
+  top: 300px;
+  left: -500px;
+}
+.contacts .photo3 {
+  top: 800px;
+  left: 20px;
+}
+.contacts .photo4 {
+  top: 750px;
+  right: 20px;
+}
+
+.about {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  gap: 44px;
+  margin-bottom: 120px;
+}
+.about .section-title {
+  margin-left: 40px;
+  font-family: "Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 600;
+  color: #1E1E1E;
+}
+.about__image {
+  max-height: 850px;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
+.about__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about__text {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  border: 1px solid #1E1E1E;
+  border-right: none;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  padding: 0 65px 50px 65px;
+  text-align: justify;
+}
+.about__text p {
+  font-size: 26px;
+  color: #1E1E1E;
 }
 
 .modal-form {

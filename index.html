@@ -26,9 +26,10 @@
             <li class="nav__item"><a href="#">контакты</a></li>
           </ul>
         </nav>
-        <a href="#" class="header__item">перейти в каталог</a>
+        <button id="header__openform" class="header__item">написать нам</button>
       </ul>
     </header>
+    
     <main class="main body-padding wrapper">
       <div class="main__banner"></div>
       <div class="main__description">
@@ -47,6 +48,39 @@
         </div>
       </div>
     </main>
+    
+
+    <section class="about">
+      <img class="about__image" src="./img/aboutImage.png" alt="aboutImage">
+      <div class="about__wrapper">
+        <h2 class="section-title">О компании</h2>
+        <div class="about__text">
+          <p>Добро пожаловать в Marine Trade — вашего надежного партнера в мире передовых технологий. С момента нашего основания, мы стремимся стоять в авангарде инноваций и технологического развития. Наша миссия — предоставлять решения, которые не просто соответствуют текущим требованиям рынка, но и опережают их, открывая новые возможности для бизнеса наших клиентов. В Marine Trade мы верим, что успех наших клиентов — это наш успех. Это убеждение формирует основу нашей работы. Мы объединили команду высококвалифицированных специалистов, готовых предложить инновационные и эффективные решения в области IT. Наш подход индивидуален к каждому клиенту, и мы стремимся предоставлять не просто услуги, но и настоящие IT-решения, которые помогут вашему бизнесу расти и развиваться. В нашем портфолио — множество успешно реализованных проектов, от малых предприятий до крупных корпораций. Мы гордимся тем, что можем предложить нашим клиентам не только продукты, но и полный спектр услуг: от консультаций и планирования до внедрения и поддержки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper">
+        <div class="actions">
+          <h2 class="section-title">Виды деятельности</h2>
+          <div class="actions__wrapper">
+            <div class="actions__item">
+              <img src="./img/actions1.svg" alt="actions1">
+              <p>Поставка </br>IT-Оборудования</p>
+            </div>
+            <div class="actions__item">
+              <img src="./img/actions2.svg" alt="actions2">
+              <p>Системная </br>интеграция</p>
+            </div>
+            <div class="actions__item">
+              <img src="./img/actions3.svg" alt="actions3">
+              <p>Сервис</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="advantages">
       <h2 class="advantages__title">Преимущества работы с нами</h2>
@@ -119,7 +153,7 @@
                 </div>
             </div>
           </div>
-          <!-- <div class="swiper-pagination"></div> -->
+          <!-- <div class="swiper-pagination card__pagination"></div> -->
         </div>
         <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
@@ -195,6 +229,14 @@
             <p class="contacts__text"><span>Email:</span> <a href="mailto:test@email.ru">test@email.ru</a></p>
             <p class="contacts__text"><span>Телефон:</span> <a href="tel:88009991122">8 (800) 999-11-22</a></p>
           </div>
+          <div class="contacts__map">
+            <h2 class="contacts__title">Мы на карте</h2>
+            <div id="map" style="width: 100%; height: 600px"></div>
+          </div>
+          <img class="contacts__photo photo1" src="./img/contacts/contacts1.png" alt="contacts1">
+          <img class="contacts__photo photo2" src="./img/contacts/contacts2.png" alt="contacts2">
+          <img class="contacts__photo photo3" src="./img/contacts/contacts3.png" alt="contacts3">
+          <img class="contacts__photo photo4" src="./img/contacts/contacts4.png" alt="contacts4">
         </div>
       </div>
     </section>
@@ -271,5 +313,38 @@
 
     <script src="/js/scripts.js"></script>
     <script src="/js/sliders.js"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=a8a171f0-1d76-426b-9c1f-c6c58d7df875&lang=ru_RU"></script>
+    <script>
+      initMap();
+
+      async function initMap() {
+        // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+        await ymaps3.ready;
+
+        const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+        const map = new YMap(document.getElementById("map"), {
+          location: {
+            center: [37.600729, 55.720905],
+            zoom: 16.55,
+          },
+          behaviors: ['drag', 'pinchZoom', 'dblClick']
+        });
+        const { YMapDefaultMarker } = await ymaps3.import(
+          "@yandex/ymaps3-markers@0.0.1"
+        );
+
+        let marker = new YMapDefaultMarker({
+          coordinates: [37.600729, 55.720905],
+          draggable: false,
+          title: "Адрес: 119071, г. Москва",
+          subtitle: "Ленинский проспект, 15А",
+        });
+
+          map.addChild(new YMapDefaultSchemeLayer());
+          map.addChild(new ymaps3.YMapDefaultFeaturesLayer({ zIndex: 1800 }));
+          map.addChild(marker);
+      }
+    </script>
   </body>
 </html>

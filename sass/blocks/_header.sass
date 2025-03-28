@@ -29,7 +29,7 @@
         @include transition
         &:hover
             color: white
-            background-color: black
+            background-color: $blue
     &__item:last-child
         background-color: $dark
         border-radius: 22px
@@ -48,9 +48,12 @@
         display: flex
         justify-content: space-between
         align-items: center
-        gap: 84px
+        // gap: 84px
     &__item
+        padding: 0 15px
         @include transition
         height: 100%
+        border-radius: 8px
         &:hover
-            background-color: black
+            color: white
+            background-color: $blue

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalForm = document.querySelector('#modalForm')
     // обработчик на кнопку для открытия модалки
     document.querySelector('#openModalForm').addEventListener('click', openModal);
+    document.querySelector('#header__openform').addEventListener('click', openModal);
 
     function openModal() {
         modalForm.classList.add('modal-form_open');
